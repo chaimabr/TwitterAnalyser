@@ -15,7 +15,7 @@ import com.google.gson.stream.JsonReader;
 public class tweetanalyser {
 	public static void main(String[] args) {
 		try {
-			String url = "D:\\projeteurecom\\dataset\\facup_tweets\\facup.json";
+			String url = "E:\\projeteurecom\\dataset\\facup_tweets\\facup.json";
 			JsonReader reader = new JsonReader(new InputStreamReader(
 					new FileInputStream(url)));
 			JsonParser jsonParser = new JsonParser();
