@@ -17,13 +17,14 @@ public class JsonData {
 	static List<String> listText = new ArrayList<String>();
 	static List<Long> listRtCount = new LinkedList<Long>();
 	static List<Long> listRtCountTrier = new LinkedList<Long>();
-	static List<String> stopWords ;
+	static List<String> stopWords = new LinkedList<String>(); ;
 	
 	
 	public static void main(String[] args) {
 		
 		try {
 			 BufferedReader sw1 = new BufferedReader(new FileReader(""+"stopwords.txt"));
+		
 		        while((str = sw1.readLine()) != null) 
 				{	
 					stopWords.add(str);
@@ -31,7 +32,7 @@ public class JsonData {
 			// read the json file
 			BufferedReader buffer = new BufferedReader(new FileReader("D:\\dataset\\Tweet_files\\5_5_2012_16_16.json"));
 			
-			FileWriter fileWrite = new FileWriter(new File("5_5_2012_16_16.txt"));
+			FileWriter fileWrite = new FileWriter(new File("D:\\5_5_2012_16_16.txt"));
 			BufferedWriter bufferWr = new BufferedWriter(fileWrite);
 			
 			while((str = buffer.readLine()) != null) 
@@ -53,6 +54,7 @@ public class JsonData {
 			
 			//sort the list
 			Collections.sort(listRtCountTrier);
+		
 						
 			//display top 2		
 			int l=0;
@@ -86,7 +88,7 @@ public class JsonData {
 					    
 
 					        for (String str : keywords){
-					        	if (str.length()>3){
+					        	if (str.length()>2){
 					        	bufferWr.write(str+" "); }
 					        }
 					        bufferWr.newLine();
