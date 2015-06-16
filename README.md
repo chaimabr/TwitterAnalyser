@@ -1,5 +1,5 @@
 TwitterAnalyser
 ===============
 
-This code analyzes the tweets in order to detect the ones who get more favorited and re-tweeted.
-It displays the text of the top 5 favorited tweets and the top 5 re-tweeted.
+This code analyzes the tweets for a specific timeslot in order to detect the ones who get more re-tweeted and then extract keywords from its text and write it in a text file such that each line of this file represent a different topic. 
+
